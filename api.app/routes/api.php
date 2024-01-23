@@ -2,18 +2,25 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\HomeController;
+use App\Enums\HttpStatusCodesEnum;
+use App\Helpers\HttpResponses;
 
 /*
 |--------------------------------------------------------------------------
 | API Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::any('/', [HomeController::class,'welcome']);
+Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::group(['namespace' => 'Api', 'prefix' => 'v1'], function () {
+    Route::any('/', [HomeController::class,'index']);
+});
+
+# Def
+Route::fallback(action: function () {
+    return HttpResponses::error(null,null,HttpStatusCodesEnum::NotFound,HttpStatusCodesEnum::NotFound);
 });

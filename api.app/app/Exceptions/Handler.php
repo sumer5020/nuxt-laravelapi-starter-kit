@@ -27,4 +27,9 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    protected function shouldReturnJson($request, Throwable $e): bool
+    {
+        return parent::shouldReturnJson($request, $e) || $request->is("api/*");
+    }
 }
