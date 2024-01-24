@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return [
         'Laravel' => app()->version(),
-        'Modified by' => 'SUMER5020'
+        'Modified by' => 'Modified with ❤️ by Sumer Ahmed - [SUMER5020]'
     ];
 });
 

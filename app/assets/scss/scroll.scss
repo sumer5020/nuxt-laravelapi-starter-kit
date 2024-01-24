@@ -1,0 +1,60 @@
+@use 'variables' as vars;
+
+html {      
+    [hidden] {
+        display: none;
+    }
+
+    overflow: auto;
+    /* Thump - Track For Firefox */
+    scrollbar-color: vars.$scroll_from vars.$scroll_track;
+    scrollbar-width: 7px;
+    
+    /* width */
+    &::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-button {
+        width: 7px;
+        height: 7px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    /* Thumb */
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(to top right, vars.$scroll_from, vars.$scroll_to);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border: 0px solid transparent;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background: vars.$scroll_active;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: vars.$scroll_active;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: vars.$scroll_track;
+        border: 0px none vars.$scroll_track;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-track:active {
+        background: vars.$scroll_track_active;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*customize directions*/
+@layer components {
+  .dir-ltr {
+    direction: ltr;
+  }
+
+  .dir-rtl {
+    direction: rtl;
+  }
+}

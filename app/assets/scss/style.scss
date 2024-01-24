@@ -1,0 +1,19 @@
+@use 'variables' as vars;
+
+* {
+    text-align: initial;
+}
+
+::selection {
+    color: $selection_color;
+    background: $selection_background;
+    border-radius: 20%;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+.Vue-Toastification__container {
+    direction: ltr !important;
+}
