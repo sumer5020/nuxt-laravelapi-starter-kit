@@ -3,6 +3,7 @@ export default {
     title:{
         home: `Home`,
         register: `register`,
+        login: `login`,
     },
     content:{
         home: `Home`,

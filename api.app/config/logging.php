@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
@@ -54,7 +55,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['custom'],
             'ignore_exceptions' => false,
         ],
 
@@ -80,6 +81,11 @@ return [
             'emoji' => ':boom:',
             'level' => env('LOG_LEVEL', 'critical'),
             'replace_placeholders' => true,
+        ],
+        'custom' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/'.Carbon::now()->format('Y-M').'/'.Carbon::now()->format('Y-m-d').'.log'),
+            'level' => 'debug',
         ],
 
         'papertrail' => [

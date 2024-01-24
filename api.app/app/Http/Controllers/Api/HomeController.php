@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Helpers\ActivityLogger;
 use App\Http\Controllers\Controller;
 use App\Helpers\HttpResponses;
 use Illuminate\Http\Request;
@@ -10,6 +11,9 @@ class HomeController extends Controller
 {
     public function welcome()
     {
+        // This function is monitored by ActivityLogger
+        ActivityLogger::log('HomeController.welcome', 'debug', 'test log', ['Ping' => 'Pong']);
+        
         return HttpResponses::success([
             "openapi"=>"3.1.0",
             "info"=>[

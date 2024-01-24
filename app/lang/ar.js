@@ -3,6 +3,7 @@ export default {
     title:{
         home: `الرئيسية`,
         register: `تسجيل حساب`,
+        login: `تسجيل دخول`,
     },
     content:{
         home: `الرئيسية`,
