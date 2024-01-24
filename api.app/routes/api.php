@@ -17,7 +17,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 
 Route::group(['namespace' => 'Api', 'prefix' => 'v1'], function () {
-    Route::any('/', [HomeController::class,'index']);
+    Route::any('/', [HomeController::class,'index'])->middleware('throttle:1,0.033');
 });
 
 # Def
