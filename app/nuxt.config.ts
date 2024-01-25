@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
-    'nuxt-icon',
+    'nuxt-icon', // hint
     '@nuxt/image',
   ],
   i18n: {
