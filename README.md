@@ -3,6 +3,7 @@
 <a href="https://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
 <a href="#"><img src="https://img.shields.io/badge/Type-Nuxt_WEB_&_Laravel_API_Template-black" alt="Repository Type"></a>
 <a href="#"><img src="https://img.shields.io/badge/Latest_Version-0.0.1-blue" alt="Latest Version"></a>
+    <a href="#"><img src="https://img.shields.io/badge/Stand_With_Palestine_🇵🇸-white" alt="Stand With Palestine 🇵🇸"></a>
 </br></br></br></br>
 </p>
 
