@@ -32,6 +32,7 @@
     "chart.js": "^4.4.1",
     "pinia": "^2.1.6",
     "tailwind-scrollbar": "^3.0.5",
+    "vite": "^5.0.12",
     "vue-chartjs": "^5.3.0",
     "vue-toastification": "^2.0.0-rc.5"
   }
