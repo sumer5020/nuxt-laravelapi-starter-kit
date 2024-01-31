@@ -71,8 +71,8 @@ Test the app by run the following command:
   php ./api.app/artisan serve
 
   # WEB
-  npm install -D --prefix ./app
-  npm run dev -prefix ./app
+  pnpm --prefix ./app install
+  pnpm --prefix ./app run dev
 ```
 
 ## Feedback

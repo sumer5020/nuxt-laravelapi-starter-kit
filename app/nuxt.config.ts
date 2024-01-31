@@ -1,6 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  ssr: true,
+  experimental: { 
+    sharedPrerenderData: true,
+    viewTransition: true,
+    scanPageMeta: true
+  },
+  app: {
+    viewTransition: true
+  },
   routeRules: {
     // Homepage pre-rendered at build time
     '/': { prerender: true },
@@ -19,7 +28,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
-    'nuxt-icon', // hint
     '@nuxt/image',
   ],
   i18n: {

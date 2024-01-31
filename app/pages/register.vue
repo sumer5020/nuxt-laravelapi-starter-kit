@@ -1,7 +1,11 @@
 <script lang="ts" setup>
 import rectangles from '~/assets/rectangles.svg'
 import { useAuthStore } from "~/stores/useAuthStore";
-const { t } = useI18n();
+const { t } = useI18n()
+/*SSR-safe accessible unique ID creation*/
+const emailId = useId()
+const passwordId = useId()
+const nameId = useId()
 
 definePageMeta({
   layout: 'empty',
@@ -55,16 +59,16 @@ async function handleRegister() {
             <form @submit.prevent="handleRegister" class="w-full">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-x-2">
                 <div class="flex flex-col w-full my-2">
-                  <InputOutline v-model="form.name" :label="$t('content.fullName')" name="name" autofocus />
+                  <InputOutline :id="nameId" v-model="form.name" :label="$t('content.fullName')" name="name" autofocus />
                 </div>
                 <div class="flex flex-col w-full my-2">
-                  <InputOutline v-model="form.email" :label="$t('content.email')" name="email" />
+                  <InputOutline :id="emailId" v-model="form.email" :label="$t('content.email')" name="email" />
                 </div>
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-x-2">
                 <div class="flex flex-col w-full my-2">
-                  <InputOutline v-model="form.password" type="password" :label="$t('content.password')" name="password" />
+                  <InputOutline :id="passwordId" v-model="form.password" type="password" :label="$t('content.password')" name="password" />
                 </div>
 
                 <div class="flex flex-col w-full my-2">
@@ -78,7 +82,7 @@ async function handleRegister() {
                   class="w-full py-2 bg-blue-600 rounded-lg text-blue-100 hover:text-blue-50">
                   <div class="flex flex-row items-center justify-center">
                     <div class="rtl:order-1 ltr:order-2 font-bold uppercase">{{ $t('content.register') }}</div>
-                    <Icon v-if="loginPending" name="svg-spinners:gooey-balls-2" class="w-6 h-6 mx-2" />
+                    <Icon  v-if="loginPending" name="SvgSpinnersGooeyBalls2" class="w-6 h-6 mx-2" />
                   </div>
                 </button>
 

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useAuthStore } from "~/stores/useAuthStore";
+import { useAuthStore } from "~/stores/useAuthStore"
 import logo from '~/assets/logo.svg'
 
 const auth = useAuthStore();
@@ -30,7 +30,7 @@ const sidebarHandler = async (toggle: boolean) => {
       class="h-10 w-10 md:hidden z-40 bg-blue-900 text-blue-100 fixed top-0 ltr:left-0 rtl:right-0 mt-3 flex items-center shadow ltr:rounded-r-full rtl:rounded-l-full justify-center cursor-pointer focus:outline-none transition duration-150 ease-in-out"
       @click="sidebarHandler(moved)">
       <!--style="transform: translateX(-260px);"-->
-      <Icon name="mdi:menu" class="w-6 h-6" />
+      <Icon  name="MdiMenu" class="w-6 h-6" />
     </button>
 
     <div class="fixed md:relative z-30 min-h-screen md:flex">
@@ -54,7 +54,7 @@ const sidebarHandler = async (toggle: boolean) => {
           <ul class="mt-12">
             <li class="flex w-full justify-between text-blue-100 hover:text-blue-50 cursor-pointer items-center mb-6">
               <NuxtLink to="#" class="flex items-center focus:outline-none focus:text-lime-100">
-                <Icon name="material-symbols:dashboard-rounded" class="w-5 h-5" />
+                <Icon  name="MaterialSymbolsDashboardRounded" class="w-5 h-5" />
                 <span class="text-sm font-bold mx-2">{{
                   $t("content.dashboard")
                 }}</span>
@@ -63,7 +63,7 @@ const sidebarHandler = async (toggle: boolean) => {
             </li>
             <li class="flex w-full justify-between text-blue-100 hover:text-blue-50 cursor-pointer items-center mb-6">
               <NuxtLink to="#" class="flex items-center focus:outline-none focus:text-lime-100">
-                <Icon name="material-symbols:display-settings" class="w-5 h-5" />
+                <Icon  name="MaterialSymbolsDisplaySettings" class="w-5 h-5" />
                 <span class="text-sm font-bold mx-2">{{
                   $t("content.settings")
                 }}</span>
@@ -74,16 +74,16 @@ const sidebarHandler = async (toggle: boolean) => {
         </div>
         <div class="px-5 border-t border-blue-100 sticky bottom-0">
           <ul class="w-full flex items-center justify-between bg-blue-700">
-            <li class="cursor-pointer px-1 py-3">
+            <li class="cursor-pointer px-1 py-2">
               <Theme :dashStyle="true" />
             </li>
-            <li class="cursor-pointer px-1 py-3">
+            <li class="cursor-pointer px-1 py-2">
               <Language :dashStyle="true" />
             </li>
-            <li class="cursor-pointer px-1 py-3 text-blue-100">
+            <li class="cursor-pointer px-1 py-2 text-blue-100">
               <!-- Authentication -->
               <button @click="handleLogout" aria-label="logout" class="focus:outline-none rounded focus:text-lime-100">
-                <Icon name="material-symbols:mode-off-on" class="w-6 h-6" />
+                <Icon  name="MaterialSymbolsModeOffOn" class="w-7 h-7 pt-1 block" />
               </button>
             </li>
           </ul>
@@ -110,7 +110,7 @@ const sidebarHandler = async (toggle: boolean) => {
           <ul class="mt-12">
             <li class="flex w-full justify-between text-blue-100 hover:text-blue-50 cursor-pointer items-center mb-6">
               <NuxtLink to="#" class="flex items-center focus:outline-none focus:text-lime-100">
-                <Icon name="material-symbols:dashboard-rounded" class="w-5 h-5" />
+                <Icon  name="MaterialSymbolsDashboardRounded" class="w-5 h-5" />
                 <span class="text-sm font-bold mx-2">{{
                   $t("content.dashboard")
                 }}</span>
@@ -119,7 +119,7 @@ const sidebarHandler = async (toggle: boolean) => {
             </li>
             <li class="flex w-full justify-between text-blue-100 hover:text-blue-50 cursor-pointer items-center mb-6">
               <NuxtLink to="#" class="flex items-center focus:outline-none focus:text-lime-100">
-                <Icon name="material-symbols:display-settings" class="w-5 h-5" />
+                <Icon  name="MaterialSymbolsDisplaySettings" class="w-5 h-5" />
                 <span class="text-sm font-bold mx-2">{{
                   $t("content.settings")
                 }}</span>
@@ -130,16 +130,16 @@ const sidebarHandler = async (toggle: boolean) => {
         </div>
         <div class="px-5 border-t border-blue-100 sticky bottom-0">
           <ul class="w-full flex items-center justify-between bg-blue-700">
-            <li class="cursor-pointer px-1 py-3">
+            <li class="cursor-pointer px-1 py-2">
               <Theme :dashStyle="true" />
             </li>
-            <li class="cursor-pointer px-1 py-3">
+            <li class="cursor-pointer px-1 py-2">
               <Language :dashStyle="true" />
             </li>
-            <li class="cursor-pointer px-1 py-3 text-blue-100">
+            <li class="cursor-pointer px-1 py-2 text-blue-100">
               <!-- Authentication -->
               <button @click="handleLogout" aria-label="logout" class="focus:outline-none rounded focus:text-lime-100">
-                <Icon name="material-symbols:mode-off-on" class="w-6 h-6" />
+                <Icon  name="MaterialSymbolsModeOffOn" class="w-7 h-7 pt-1 block" />
               </button>
             </li>
           </ul>

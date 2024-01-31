@@ -16,8 +16,8 @@ const changeToggle = async() => {
                 <!--@focusout="toggle = false"-->
                 <button @click="changeToggle"
                     class="inline-flex uppercase justify-center p-2 items-center rounded-md shadow-sm focus:outline-none">
-                    <Icon v-if="notifications?.length == 0" name="mdi:bell" class="w-5 h-5" />
-                    <Icon v-else name="mdi:bell-badge" class="w-5 h-5" />
+                    <Icon  v-if="notifications?.length == 0" name="MdiBell" class="w-5 h-5" />
+                    <Icon  v-else name="MdiBellBadge" class="w-5 h-5" />
                 </button>
                 <div class="w-64 capitalize absolute mt-2 rounded-md shadow-lg origin-top-right dark:bg-dark_blue-900 bg-white"
                     :class="(!toggle ? 'hidden' : '')+' '+ (locale == 'ar' ? 'left-0' : 'right-0')">

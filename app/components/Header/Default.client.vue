@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useAuthStore } from "~/stores/useAuthStore"
 import logo from '~/assets/logo.svg'
+import Icon from '~/components/Icon/index.vue'
 
 const auth = useAuthStore()
 const localePath = useLocalePath()
@@ -101,7 +102,7 @@ onUnmounted(() => {
                     class="dark:hover:text-light_blue-50 hover:text-dark_blue-900 p-1 flex justify-between items-center"
                     :to="localePath('/')">
                     <span>{{ $t('content.home') }}</span>
-                    <Icon name="mdi:arrow-top-right" class="w-4 h-4 rtl:-rotate-90" />
+                    <Icon name="MdiArrowTopRight" class="w-4 h-4 rtl:-rotate-90" />
                   </NuxtLink>
                 </li>
                 <li v-if="!auth.isLoggedIn" class="w-full">
@@ -109,7 +110,7 @@ onUnmounted(() => {
                     class="dark:hover:text-light_blue-50 hover:text-dark_blue-900 p-1 flex justify-between items-center"
                     :to="localePath('/login')">
                     <span>{{ $t('content.signIn') }}</span>
-                    <Icon name="mdi:arrow-top-right" class="w-4 h-4 rtl:-rotate-90" />
+                    <Icon name="MdiArrowTopRight" class="w-4 h-4 rtl:-rotate-90" />
                   </NuxtLink>
                 </li>
                 <li v-if="auth.isLoggedIn" class="w-full">
@@ -117,7 +118,7 @@ onUnmounted(() => {
                     class="dark:hover:text-light_blue-50 hover:text-dark_blue-900 p-1 flex justify-between items-center"
                     :to="localePath('/dashboard')">
                     <span>{{ $t('content.dashboard') }}</span>
-                    <Icon name="mdi:arrow-top-right" class="w-4 h-4 rtl:-rotate-90" />
+                    <Icon name="MdiArrowTopRight" class="w-4 h-4 rtl:-rotate-90" />
                   </NuxtLink>
                 </li>
                 <li v-if="auth.isLoggedIn" class="w-full">
@@ -125,7 +126,7 @@ onUnmounted(() => {
                     class="w-full dark:hover:text-light_blue-50 hover:text-dark_blue-900 p-1 flex justify-between items-center"
                     @click="handleLogout">
                     <span>{{ $t('content.logout') }}</span>
-                    <Icon name="mdi:arrow-top-right" class="w-4 h-4 rtl:-rotate-90" />
+                    <Icon name="MdiArrowTopRight" class="w-4 h-4 rtl:-rotate-90" />
                   </button>
                 </li>
                 <li class="w-full">

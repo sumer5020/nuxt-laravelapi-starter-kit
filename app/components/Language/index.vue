@@ -28,7 +28,7 @@ const langChange = async(lang: string) => {
         :class="dashStyle ? 'text-blue-100' : 'text-light_primary dark:text-dark_primary'">
         <div class="relative inline-block text-start" aria-label="language">
             <button @click="changeToggle" @focusout="closeToggle" class="inline-flex uppercase justify-center p-2 items-center rounded-md shadow-sm focus:outline-none">
-                <Icon name="ion:language" class="h-5 w-5" />
+                <Icon  name="IonLanguage" class="h-5 w-5" />
             </button>
             <div class="capitalize absolute mt-2 rounded-md shadow-lg"
                 :class="(!toggle ? 'hidden': '') +' '+ (dashStyle ? 'origin-top bottom-full bg-blue-800' : 'origin-top-right right-0 dark:bg-dark_blue-900 bg-white')">

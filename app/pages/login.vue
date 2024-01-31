@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 import rectangles from '~/assets/rectangles.svg'
 import { useAuthStore } from "~/stores/useAuthStore";
-const { t } = useI18n();
+const { t } = useI18n()
+/*SSR-safe accessible unique ID creation*/
+const emailId = useId()
+const passwordId = useId()
 
 definePageMeta({
   layout: 'empty',
@@ -58,18 +61,18 @@ async function handleLogin() {
             <form @submit.prevent="handleLogin" class="w-full">
               <input type="hidden" name="remember" value="true">
               <div class="flex flex-col w-full my-5">
-                <InputOutline v-model="form.email" :label="$t('content.username')" name="email" autofocus />
+                <InputOutline :id="emailId" v-model="form.email" :label="$t('content.username')" name="email" autofocus />
               </div>
 
               <div class="flex flex-col w-full my-5">
-                <InputOutline v-model="form.password" type="password" :label="$t('content.password')" name="password" />
+                <InputOutline :id="passwordId" v-model="form.password" type="password" :label="$t('content.password')" name="password" />
               </div>
 
               <div id="button" class="flex flex-col w-full mt-3">
                 <button :disabled="loginPending == true" type="submit" label="Login" class="w-full py-2 bg-blue-600 rounded-lg text-blue-100 hover:text-blue-50">
                   <div class="flex flex-row items-center justify-center">
                     <div class="rtl:order-1 ltr:order-2 font-bold uppercase">{{ $t('content.signIn') }}</div>
-                    <Icon v-if="loginPending" name="svg-spinners:gooey-balls-2" class="w-6 h-6 mx-2" />
+                    <Icon  v-if="loginPending" name="SvgSpinnersGooeyBalls2" class="w-6 h-6 mx-2" />
                   </div>
                 </button>
 
