@@ -17,23 +17,22 @@ An Open Source Project designed to provide our fellow developers/students a bett
 | `api.app` | `Laravel`     | **Required**. PHP ^8.1          |
 | `app`     | `Nuxt3`       | **Required**. Node ^v18.0.0     |
 
-
 ## Features
-- api.app
-    - Laravel breeze api
-    - Http response helper
-    - Activity log helper
-    - Collection manager helper
-    - Htaccess firewall
-- app
-    - Responsive design
-    - Light/dark mode toggle
-    - Tailwindcss
-    - Multilingual
-    - Auth pages
-    - Dashboard
-    - Toast notification
 
+- api.app
+  - Laravel breeze api
+  - Http response helper
+  - Activity log helper
+  - Collection manager helper
+  - Htaccess firewall
+- app
+  - Responsive design
+  - Light/dark mode toggle
+  - Tailwindcss
+  - Multilingual
+  - Auth pages
+  - Dashboard
+  - Toast notification
 
 ## Theme Color Reference
 
@@ -57,7 +56,6 @@ An Open Source Project designed to provide our fellow developers/students a bett
 <img width="400" height="300" src="dashboard.png" alt="Dashboard Screenshot">
 </p>
 
-
 ## Setup And Run
 
 Test the app by run the following command:
@@ -80,4 +78,4 @@ Test the app by run the following command:
 
 ## Feedback
 
-If you have any feedback, please reach out to us at sumer5020@outlook.com
+If you have any feedback, please reach out to us at <sumer5020@outlook.com>
