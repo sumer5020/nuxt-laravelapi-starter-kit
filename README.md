@@ -76,7 +76,7 @@ Test the app by run the following command:
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](./LICENSE.md)
 
 ## Feedback
 
