@@ -1,4 +1,4 @@
-<p align="center"></br><img src="./.src/logo.svg" width="100" height="100" alt="sumer5020"></p>
+<p align="center"></br><img src="logo.svg" width="100" height="100" alt="sumer5020"></p>
 <p align="center">
 <a href="https://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
 <a href="#"><img src="https://img.shields.io/badge/Type-Nuxt_WEB_&_Laravel_API_Template-black" alt="Repository Type"></a>
@@ -52,10 +52,10 @@ An Open Source Project designed to provide our fellow developers/students a bett
 ## Screenshots
 
 <p align="center">
-<img width="400" height="300" src="./.src/Screenshot/home.png" alt="Home Screenshot">
-<img width="400" height="300" src="./.src/Screenshot/login.png" alt="Login Screenshot">
-<img width="400" height="300" src="./.src/Screenshot/register.png" alt="Register Screenshot">
-<img width="400" height="300" src="./.src/Screenshot/dashboard.png" alt="Dashboard Screenshot">
+<img width="400" height="300" src="home.png" alt="Home Screenshot">
+<img width="400" height="300" src="login.png" alt="Login Screenshot">
+<img width="400" height="300" src="register.png" alt="Register Screenshot">
+<img width="400" height="300" src="dashboard.png" alt="Dashboard Screenshot">
 </p>
 
 
