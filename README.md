@@ -19,6 +19,7 @@ An Open Source Project designed to provide our fellow developers/students a bett
 | `app`     | `Nuxt 3`      | **Required**. Node ^v20.14      |
 
 ## Features
+
 - api.app
 
   - [ ] Laravel breeze api
@@ -26,7 +27,6 @@ An Open Source Project designed to provide our fellow developers/students a bett
   - [ ] Activity log helper
   - [ ] Collection manager helper
   - [ ] Htaccess firewall
- 
 
 - app
 
@@ -37,3 +37,47 @@ An Open Source Project designed to provide our fellow developers/students a bett
   - [ ] Auth pages
   - [ ] Dashboard
   - [ ] Toast notification
+
+<!--
+## Theme Color Reference
+
+| Color             |                                                          | Hex     |
+| :---------------- | :-------------------------------------------------------:| :-------|
+| Dark theme:       |                                                          |         |
+| Primary           | ![#b4c9d9](https://via.placeholder.com/10/b4c9d9?text=+) | #b4c9d9 |
+| Secondary         | ![#0b4b7d](https://via.placeholder.com/10/0b4b7d?text=+) | #0b4b7d |
+| Background        | ![#090b1f](https://via.placeholder.com/10/090b1f?text=+) | #090b1f |
+| Light theme:      |                                                          |         |
+| Primary           | ![#203552](https://via.placeholder.com/10/203552?text=+) | #203552 |
+| Secondary         | ![#0b4b7d](https://via.placeholder.com/10/0b4b7d?text=+) | #0b4b7d |
+| Background        | ![#f0f4f3](https://via.placeholder.com/10/f0f4f3?text=+) | #f0f4f3 |
+
+## Screenshots
+
+<p align="center">
+<img width="400" height="300" src="./.src/Screenshot/index.png" alt="Home Screenshot">
+<img width="400" height="300" src="./.src/Screenshot/login.png" alt="Login Screenshot">
+<img width="400" height="300" src="./.src/Screenshot/register.png" alt="Register Screenshot">
+<img width="400" height="300" src="./.src/Screenshot/dashboard.png" alt="Dashboard Screenshot">
+</p>
+-->
+
+## Setup And Run
+
+Test the app by run the following command:
+
+```bash
+  # API
+  composer install --working-dir=./api.app
+  php ./api.app/artisan migrate
+  php ./api.app/artisan db:seed
+  php ./api.app/artisan serve
+
+  # WEB
+  yarn --cwd ./app install
+  yarn --cwd ./app run dev
+```
+
+## Feedback
+
+If you have any feedback, please reach out to us at sumer5020@outlook.com
